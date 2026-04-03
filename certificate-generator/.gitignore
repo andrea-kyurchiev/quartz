@@ -1,0 +1,22 @@
+*.pyc
+*.log
+node_modules
+coverage/
+certificate_generator/logs
+certificate_generator/export_deliverables
+certificate_generator/cantaloupe/*
+certificate_generator/staticfiles
+certificate_generator/media/packages
+certificate_generator/media/build/
+certificate_generator/uploadedfiles/*
+certificate_generator/settings_local.py
+webpack-stats.json
+.vscode/
+*.egg-info
+.DS_STORE
+CACHE
+frontend_configuration
+
+# Packaging
+build/
+dist/
