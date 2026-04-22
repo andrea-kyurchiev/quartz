@@ -2,6 +2,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import include, path, re_path
+from quartz.views.certificate_generator_plugin_get_resources import CertificateGeneratorPluginGetResources
+from quartz.views.certificate_generator_plugin_view import CertificateGeneratorPluginView
+from quartz.views.certificate_generator_plugin_process_template import CertificateGeneratorPluginProcessTemplate
 
 import django_saml2_auth.views
 
@@ -18,6 +21,9 @@ urlpatterns = [
     path("", include("arches_controlled_lists.urls")),
     path("", include("arches_component_lab.urls")),
     path("", include("arches_her.urls")),
+    path("api/certificate-generator/templates/", CertificateGeneratorPluginView.as_view(), name="certificate_generator_templates"),
+    path("api/certificate-generator/resources/", CertificateGeneratorPluginGetResources.as_view(), name="certificate_generator_resources"),
+    path("api/certificate-generator/process_template/", CertificateGeneratorPluginProcessTemplate.as_view(), name="certificate_generator_process_template"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Only handle i18n routing in active project. This will still handle the routes provided by Arches core and Arches applications,

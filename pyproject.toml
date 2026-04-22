@@ -26,7 +26,21 @@ dependencies = [
     "arches>=8.0.0,<8.2.0",
     "grafana-django-saml2-auth>=3.12.0",
     "arches_controlled_lists",
-    "arches_her @ git+https://github.com/archesproject/arches-her.git@dev/2.0.x"
+    "arches_her @ git+https://github.com/archesproject/arches-her.git@dev/2.0.x",
+    "beautifulsoup4==4.14.3",
+    "docxtpl==0.20.2",
+    "Jinja2==3.1.6",
+    "lxml==6.0.2",
+    "Markdown==3.10",
+    "MarkupSafe==3.0.3",
+    "pillow==12.0.0",
+    "pyproj==3.7.1",
+    "python-docx",
+    "python-dotenv==1.1.0",
+    "requests",
+    "soupsieve==2.8",
+    "typing_extensions==4.15.0",
+    "alizarin @ https://github.com/flaxandteal/alizarin/releases/download/v0.2.1-alpha.31/alizarin-0.2.1a31-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
 ]
 version = "0.0.1"
 
